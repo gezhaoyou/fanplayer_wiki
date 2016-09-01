@@ -1,50 +1,49 @@
 how to build ffmpeg ?
 ---------------------
 
-1. winxp/win7 mingw64 environment
+1. winxp/win7 mingw64 environment  
 
-2. download ffmpeg and libmfx source code
-git clone https://github.com/lu-zero/mfx_dispatch
-git clone git://source.ffmpeg.org/ffmpeg.git
+2. download ffmpeg and libmfx source code  
+> git clone https://github.com/lu-zero/mfx_dispatch  
+> git clone git://source.ffmpeg.org/ffmpeg.git  
 
-3. build libmfx
-autoreconf -i
-./configure --host=i686-w64-mingw32
-make -j8 && make install
+3. build libmfx  
+> autoreconf -i  
+> ./configure --host=i686-w64-mingw32  
+> make -j8 && make install  
 
-4. build ffmpeg
-./configure \
---pkg-config=pkg-config \
---arch=x86 \
---target-os=mingw32 \
---enable-cross-compile \
---cross-prefix=i686-w64-mingw32- \
---prefix=$PWD/../ffmpeg-win-sdk \
---enable-static \
---enable-shared \
---enable-small \
---enable-memalign-hack \
---disable-swscale-alpha \
---disable-symver \
---disable-debug \
---disable-programs \
---disable-doc \
---disable-avdevice \
---disable-avfilter \
---disable-postproc \
---disable-encoders \
---disable-muxers   \
---disable-devices  \
---disable-filters  \
---enable-asm \
---enable-gpl \
---enable-version3 \
---enable-nonfree \
---enable-dxva2 \
---enable-d3d11va \
---enable-libmfx
-
-make -j8 && make install
+4. build ffmpeg  
+> ./configure \  
+> --pkg-config=pkg-config \  
+> --arch=x86 \  
+> --target-os=mingw32 \  
+> --enable-cross-compile \  
+> --cross-prefix=i686-w64-mingw32- \  
+> --prefix=$PWD/../ffmpeg-win-sdk \  
+> --enable-static \  
+> --enable-shared \  
+> --enable-small \  
+> --enable-memalign-hack \  
+> --disable-swscale-alpha \  
+> --disable-symver \  
+> --disable-debug \  
+> --disable-programs \  
+> --disable-doc \  
+> --disable-avdevice \  
+> --disable-avfilter \  
+> --disable-postproc \  
+> --disable-encoders \  
+> --disable-muxers   \  
+> --disable-devices  \  
+> --disable-filters  \  
+> --enable-asm \  
+> --enable-gpl \  
+> --enable-version3 \  
+> --enable-nonfree \  
+> --enable-dxva2 \  
+> --enable-d3d11va \  
+> --enable-libmfx  
+> make -j8 && make install  
 
 
 why using winxp/win7 mingw64 ?
@@ -71,12 +70,12 @@ make install failed after ffmpeg make ?
 
 I also meet this problem, failed to find .lib file. I modified the Makefile of ffmpeg:
 
--install: install-libs install-headers
-+install: install-headers install-libs
+> -install: install-libs install-headers  
+> +install: install-headers install-libs  
 
 to make it install headers first. for the libs file, we only need .dlls & .def, so find it in ffmpeg source code dir. strip dlls to reduce file size, use vs2005 lib.exe tool to create .lib from .def：
 
-lib /def:avformat-57.def  /MACHINE:IX86 /out:avformat.lib
+lib /def:avformat-57.def  /MACHINE:IX86 /out:avformat.lib  
 
 after these you will get headers, dlls & libs.
 
@@ -97,5 +96,5 @@ they are under the mingw64 toolchain directory. find them and release them with 
 
 
 
-rockcarry
-2016-9-1
+rockcarry  
+2016-9-1  
