@@ -84,7 +84,7 @@ meet _wfopen_s of msvcrt.dll issue ?
 ------------------------------------
 
 this is dll of msvcrt.dll issue, for winxp the msvcrt.dll does not contains the _wfopen_s api entry.
-using dependency walker tool to open dlls of ffmpeg to check will dll has problem.
+using dependency walker tool to open dlls of ffmpeg to check which dll has problem.
 using UltraEdit (or other) to open and edit the dll, change _wfopen_s to _wfopen.
 
 
