@@ -91,6 +91,6 @@ using UltraEdit (or other) to open and edit the dll, change _wfopen_s to _wfopen
 can't find libstdc++-6.dll and libgcc_s_sjlj-1.dll ?
 ----------------------------------------------------
 
-they are under the mingw64 toolchain directory. find them and release them with ffmpeg dll and your apps.
+they are under the mingw64 toolchain directory. find them and release them with ffmpeg dlls and your apps.
 
 
