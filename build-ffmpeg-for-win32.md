@@ -77,7 +77,7 @@ to make it install headers first. for the libs file, we only need .dlls & .def, 
 
 lib /def:avformat-57.def  /MACHINE:IX86 /out:avformat.lib  
 
-after these you will get headers, dlls & libs.
+after this you will get headers, dlls & libs.
 
 
 meet _wfopen_s of msvcrt.dll issue ?
