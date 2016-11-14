@@ -94,3 +94,8 @@ can't find libstdc++-6.dll and libgcc_s_sjlj-1.dll ?
 they are under the mingw64 toolchain directory. find them and release them with ffmpeg dlls and your apps.
 
 
+want a single ffmpeg.dll ?
+--------------------------
+
+gcc -shared -fPIC -o ffmpeg-x.x.x.dll -Wl,--whole-archive libavutil.a libswresample.a libswscale.a libavformat.a libavcodec.a -lwsock32 -lpthread
+
