@@ -1,4 +1,4 @@
-Welcome to the ffplayer wiki!
+# Welcome to the ffplayer wiki!
 
 [build ffmpeg for win32](https://github.com/rockcarry/ffplayer/wiki/build-ffmpeg-for-win32)
 
@@ -53,7 +53,7 @@ video only 的播放
 歌词显示
 
 
-
+----------
 rockcarry
 
 2017-06-06
