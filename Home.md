@@ -1,6 +1,6 @@
 Welcome to the ffplayer wiki!
 
-build ffmpeg for win32
+[build ffmpeg for win32](https://github.com/rockcarry/ffplayer/wiki/build-ffmpeg-for-win32)
 
 播放器原理
 
@@ -51,3 +51,6 @@ video only 的播放
 字幕显示
 
 歌词显示
+
+rockcarry
+2017-06-06
