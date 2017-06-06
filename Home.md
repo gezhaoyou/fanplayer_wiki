@@ -20,7 +20,7 @@ Welcome to the ffplayer wiki!
 
 渲染器 ffrender
 
-pktqueue
+包队列 pktqueue
 
 抽象设备 adev
 
