@@ -11,7 +11,7 @@
 
 [播放器功能原理](https://github.com/rockcarry/ffplayer/wiki/%E6%92%AD%E6%94%BE%E5%99%A8%E5%8A%9F%E8%83%BD%E5%92%8C%E5%8E%9F%E7%90%86)
 
-可移植性的考虑
+[可移植性的考虑](https://github.com/rockcarry/ffplayer/wiki/%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7%E7%9A%84%E8%80%83%E8%99%91)
 
 调试方法
 
