@@ -9,7 +9,7 @@
 
 ## ffplayer 原理、架构及代码分析
 
-播放器原理
+[播放器功能原理](https://github.com/rockcarry/ffplayer/wiki/%E6%92%AD%E6%94%BE%E5%99%A8%E5%8A%9F%E8%83%BD%E5%92%8C%E5%8E%9F%E7%90%86)
 
 可移植性的考虑
 
@@ -17,7 +17,7 @@
 
 架构设计
 
-功能和接口
+接口设计
 
 音视频同步
 
