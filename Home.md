@@ -62,10 +62,10 @@ video only 的播放
 歌词显示
 
 
-## 捐助
-如何捐助
+## 授权和捐赠
+[授权和捐赠](https://github.com/rockcarry/ffplayer/wiki/%E6%8E%88%E6%9D%83%E5%92%8C%E6%8D%90%E8%B5%A0)
 
-感谢捐助
+感谢捐赠
 
 ----------
 rockcarry
