@@ -13,7 +13,7 @@
 
 [可移植性的考虑](https://github.com/rockcarry/ffplayer/wiki/%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7%E7%9A%84%E8%80%83%E8%99%91)
 
-调试方法
+[调试方法](https://github.com/rockcarry/ffplayer/wiki/%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95)
 
 架构设计
 
