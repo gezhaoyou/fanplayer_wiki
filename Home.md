@@ -67,6 +67,9 @@ video only 的播放
 
 [感谢捐赠]( https://github.com/rockcarry/ffplayer/wiki/%E6%84%9F%E8%B0%A2%E6%8D%90%E8%B5%A0)
 
+## 合作项目
+sunplayer
+
 ----------
 rockcarry
 
