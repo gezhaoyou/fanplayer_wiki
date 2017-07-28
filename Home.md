@@ -17,7 +17,7 @@
 
 [架构设计](https://github.com/rockcarry/ffplayer/wiki/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
 
-接口设计
+[接口设计](https://github.com/rockcarry/ffplayer/wiki/%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1)
 
 音视频同步
 
