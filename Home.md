@@ -19,9 +19,7 @@
 
 [接口设计](https://github.com/rockcarry/ffplayer/wiki/%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1)
 
-[音视频同步](https://github.com/rockcarry/ffplayer/wiki/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%8C%E6%AD%A5)
-
-帧率控制
+[音视频同步与帧率控制](https://github.com/rockcarry/ffplayer/wiki/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%8C%E6%AD%A5)
 
 难点 seek 操作
 
