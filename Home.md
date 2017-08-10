@@ -5,7 +5,9 @@
 
 [build ffmpeg for win32](https://github.com/rockcarry/ffplayer/wiki/build-ffmpeg-for-win32)
 
-[build ffplayer](https://github.com/rockcarry/ffplayer/wiki/build-ffplayer)
+[build ffmpeg for android](https://github.com/rockcarry/ffplayer/wiki/build-ffmpeg-for-android)
+
+[build ffplayer for win32 & android](https://github.com/rockcarry/ffplayer/wiki/build-ffplayer)
 
 
 ## ffplayer 原理、架构及代码分析
