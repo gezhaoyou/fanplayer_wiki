@@ -42,7 +42,7 @@
 
 音频流选择的实现
 
-变速播放的实现
+[变速播放的实现](https://github.com/rockcarry/ffplayer/wiki/%E5%8F%98%E9%80%9F%E6%92%AD%E6%94%BE%E7%9A%84%E5%AE%9E%E7%8E%B0)
 
 audio only 的播放
 
