@@ -12,7 +12,7 @@
 
 ## ffplayer 原理、架构及代码分析
 
-[播放器功能原理](https://github.com/rockcarry/ffplayer/wiki/播放器功能原理)
+[播放器功能原理](https://github.com/rockcarry/ffplayer/wiki/播放器功能和原理)
 
 [可移植性的考虑](https://github.com/rockcarry/ffplayer/wiki/可移植性的考虑)
 
