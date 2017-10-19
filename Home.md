@@ -24,7 +24,7 @@
 
 [音视频同步与帧率控制](https://github.com/rockcarry/ffplayer/wiki/音视频同步与帧率控制)
 
-难点 seek 操作
+[难点 seek 操作](https://github.com/rockcarry/ffplayer/wiki/难点-seek-操作)
 
 播放消息机制
 
