@@ -51,7 +51,7 @@ video only 的播放
 带图片信息的 mp3 播放
 
 [软件音量算法]
-(https://github.com/rockcarry/ffplayer/wiki/软件音量算法)
+(https://github.com/rockcarry/ffplayer/wiki/%E5%8F%98%E9%80%9F%E6%92%AD%E6%94%BE%E7%9A%84%E5%AE%9E%E7%8E%B0)
 
 音频播放的波形与频谱显示
 
