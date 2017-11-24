@@ -26,7 +26,7 @@
 
 [难点 seek 操作](https://github.com/rockcarry/ffplayer/wiki/难点-seek-操作)
 
-播放消息机制
+[播放消息机制](https://github.com/rockcarry/ffplayer/wiki/播放消息机制)
 
 渲染器 ffrender
 
