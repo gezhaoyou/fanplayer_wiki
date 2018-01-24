@@ -1,31 +1,38 @@
 I write a script for build ffmpeg for android.
 
+build on window
+---------------
+
 enviroment needed:
 
-1. a ubuntu pc which can connect to internet
+1. install msys + git
+
+2. install android ndk, and export $NDK_HOME enviroment variable
+
+3. execute build_ffmpeg_for_android.sh
+
+   ./build_ffmpeg_for_android.sh
 
 
-2. install the android standalone toolchain
 
-   arm-linux-androideabi-4.7.1
+build on ubuntu
+---------------
 
-   download link: https://pan.baidu.com/s/1jHO6uCA passcode: k7x9
+enviroment needed:
+
+1. install git, sudo apt-get install git-core
 
 
-3. setup the toolchain:
+2. download & install git android ndk
 
-   export PATH=$PATH:$HOME/arm-linux-androideabi-4.7.1/bin
+
+3. export $NDK_HOME enviroment variable
 
 
 4. execute build_ffmpeg_for_android.sh
 
    ./build_ffmpeg_for_android.sh
 
-
-
-I suggest to use toolchain which version under 4.9.
-
-because some friend using arm-linux-androideabi-4.9.x get the compile error. but 4.8.x and 4.7.x is ok.
 
 
 
