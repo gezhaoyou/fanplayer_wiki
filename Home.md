@@ -30,7 +30,7 @@
 
 渲染器 ffrender
 
-包队列 pktqueue
+[包队列 pktqueue](https://github.com/rockcarry/ffplayer/wiki/包队列-pktqueue)
 
 抽象设备 adev
 
