@@ -1,5 +1,5 @@
 ## ffrender 的接口定义
-渲染器主要负责音频和视频的渲染呈现，ffplayer 中渲染器在 ffrender.cpp 中实现，其接口定义如下：
+渲染器主要负责音频和视频的渲染呈现，fanplayer 中渲染器在 ffrender.cpp 中实现，其接口定义如下：
 
     void* render_open(int adevtype, int srate, AVSampleFormat sndfmt, int64_t ch_layout,
                       int vdevtype, void *surface, AVRational frate, AVPixelFormat pixfmt, int w, int h);
@@ -20,7 +20,7 @@ render_open 函数，用于创建一个 render 对象，函数参数 adevtype �
     void* render_open(int adevtype, int srate, AVSampleFormat sndfmt, int64_t ch_layout,
                       int vdevtype, void *surface, AVRational frate, AVPixelFormat pixfmt, int w, int h);
 
-在 ffplayer 中 adev 和 vdev 都是抽象的音视频设备。adev 是指音频回放设备，vdev 是指视频回放设备。在 win32 平台上 adev 目前实现了 WAVEOUT 的 adev，vdev 实现了 GDI 和 D3D 两种类型的 vdev。除了设备类型之外，我们还需要指明音频采样率，即 srate 参数；音频采样格式，sndfmt 参数，音频通道类型，ch_layout 参数。采样率很容易理解，常见的 8KHz, 44100Hz, 48000Hz。采样格式，就是每一个采样点用什么样的数据类型来表示，常见的是 16bit 有符号整数，这个是 win32 WAVEOUT api 接口用的，还有 float 类型的。通道类型指的是有多少个通道，每个通道是什么含义或用途，比如常见的单声道、立体声，还有 5.1 声道等等。采样格式和通道类型，在 ffmpeg 中都有专门的类型和宏定义。
+在 fanplayer 中 adev 和 vdev 都是抽象的音视频设备。adev 是指音频回放设备，vdev 是指视频回放设备。在 win32 平台上 adev 目前实现了 WAVEOUT 的 adev，vdev 实现了 GDI 和 D3D 两种类型的 vdev。除了设备类型之外，我们还需要指明音频采样率，即 srate 参数；音频采样格式，sndfmt 参数，音频通道类型，ch_layout 参数。采样率很容易理解，常见的 8KHz, 44100Hz, 48000Hz。采样格式，就是每一个采样点用什么样的数据类型来表示，常见的是 16bit 有符号整数，这个是 win32 WAVEOUT api 接口用的，还有 float 类型的。通道类型指的是有多少个通道，每个通道是什么含义或用途，比如常见的单声道、立体声，还有 5.1 声道等等。采样格式和通道类型，在 ffmpeg 中都有专门的类型和宏定义。
 
 视频设备需要指定的还有 surface 参数，这个参数用于传入 win32 的窗口句柄，或者 android 平台的 Handler 对象。win32 平台上，传入窗口句柄，主要用于 gdi 或者 d3d 的绘图，以及播放器消息的发送。android 平台上主要用于发送播放器消息，而用于视频渲染的 surface 则是通过 vdev_android_setwindow 这个接口来传递，是 android 平台专用的接口。frate 用于指定视频帧率，这个是用的 AVRational 类型，是一个 num/den 的分数形式，比整数形式的帧率更加精确。pixfmt 是像素格式，常见的有 RGB24、YUV420P 等，也是用的 ffmpeg 定义的类型即 AVPixelFormat。w 和 h 用于指定视频的宽高。
 
@@ -37,7 +37,7 @@ void render_video(void *hrender, AVFrame *video);
 render_audio 用于渲染一个音频帧，而 render_video 用于渲染一个视频帧。
 
 这里我们可以看到，音视频的相关接口，是一个对称的接口，包括函数命名和参数，都是对称的，这样看起来就很舒服，很整齐。
-这两个接口接收的参数，一个是 render 对象的指针或者叫句柄，一个就是 AVFrame。而这个 AVFrame 又是什么？就是音视频解码线程解码出来的 AVFame，解码出来直接就扔给这两个接口。扔过去后其他就不用管了，剩下的包括视频的像素格式转换、缩放、渲染，音频的格式转换、变采样、渲染，音视频同步，...... 等等，全部都由 render 内部去处理了。这样我们的解码线程就可以看起来很简单很清晰（请参考阅读 ffplayer.cpp 中的相关代码）。
+这两个接口接收的参数，一个是 render 对象的指针或者叫句柄，一个就是 AVFrame。而这个 AVFrame 又是什么？就是音视频解码线程解码出来的 AVFame，解码出来直接就扔给这两个接口。扔过去后其他就不用管了，剩下的包括视频的像素格式转换、缩放、渲染，音频的格式转换、变采样、渲染，音视频同步，...... 等等，全部都由 render 内部去处理了。这样我们的解码线程就可以看起来很简单很清晰（请参考阅读 fanplayer.cpp 中的相关代码）。
 
 ## render_setrect
 void render_setrect(void *hrender, int type, int x, int y, int w, int h);
@@ -80,7 +80,7 @@ adev 和 vdev 这个很容易理解，就是抽象的音频设备和视频设备
 ## ffrender 中实现的更多功能
 除了上面提到的这些基本功能，ffrender 还实现了更多的东西，比如软件音量的控制算法，变速播放的实现，音频的波形渲染和频谱渲染。软件音量控制算法，说简单易懂一点，就是对每个音频采样点做了一个乘法运算和饱和运算，具体的可以参考 wiki 上的文章说明。变速播放说白了，也就是变帧率变采样率，就这么简单，具体也可看看 wiki 上的文章说明。音频的波形绘制代码也挺简单，几十行就搞定了，使用 gdi 绘图的，频率渲染，需要用 FFT 算法，为此我还自己专门写了一个 FFT。
 
-另外我们看代码可以发现，除开 render_veffect_thread 这个用于渲染音频波形和频谱的线程（无关紧要），ffrender 内部是没有开其他线程的，也就是说像素格式转换和音频格式转换，是在 render_video 和 render_audio 接口中实现的，而这两个接口是被 ffplayer.cpp 中的视频解码线程和音频解码线程所调用的。就是说解码和格式转换，都是在解码线程中去做的。这样做实际效果就已经可以了，按照 KISS 原则，就没有必要再去开线程了。
+另外我们看代码可以发现，除开 render_veffect_thread 这个用于渲染音频波形和频谱的线程（无关紧要），ffrender 内部是没有开其他线程的，也就是说像素格式转换和音频格式转换，是在 render_video 和 render_audio 接口中实现的，而这两个接口是被 fanplayer.cpp 中的视频解码线程和音频解码线程所调用的。就是说解码和格式转换，都是在解码线程中去做的。这样做实际效果就已经可以了，按照 KISS 原则，就没有必要再去开线程了。
 
 最后再提下硬解码和变速不变调。硬解码也是需要在 ffrender 中提供了相关接口的。硬解码的原则基本上就是要 0-copy 的渲染，简单说就是 packet 扔给解码器解码后，得到的 AVFame 数据，是需要直接送给硬件渲染器进行渲染的，这中间是不需要做（也很难做）任何像素格式转换的。硬解码一般都是针对高清视频而已，音频基本上都是软解码就足够了。硬解出来的高清视频，比如 4K，放到内存中，数据量都是极大的，哪怕再去做一次拷贝动作，都是及其消耗 cpu 时间的，更不要说像素格式转换。以 dxva2 的硬解码为例，解码出来直接就是一个 d3d 的 surface，这个 surface 直接扔给 d3d 设备渲染就可以了。我在 ffrender 中定义了 PARAM_VDEV_D3D_ROTATE 参数控制字，通过 render_setparam 把 surface 传给了 d3d vdev 进行直接渲染。要研究 dxva2 硬解码的，可以此为线索看代码。
 

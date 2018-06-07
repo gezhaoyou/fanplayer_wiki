@@ -1,1 +1,1 @@
-Perfect！
+fanplayer wiki

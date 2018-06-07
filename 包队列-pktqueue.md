@@ -74,9 +74,9 @@
 
 
 
-## ffplayer 中的 pktqueue
+## fanplayer 中的 pktqueue
 
-在 ffplayer 的实现中，将音视频 packet 队列，集中在了 pktqueue 这样一个对象里面，统一进行管理。并定义了相应接口：
+在 fanplayer 的实现中，将音视频 packet 队列，集中在了 pktqueue 这样一个对象里面，统一进行管理。并定义了相应接口：
 
     void* pktqueue_create (int   size); // important!! size must be power of 2
     void  pktqueue_destroy(void *ctxt);

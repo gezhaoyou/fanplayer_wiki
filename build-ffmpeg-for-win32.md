@@ -16,7 +16,7 @@ download and install msys2
 
 
 3. execute build_ffmpeg_for_win32.sh script  
-   (you can find it in ffplayer project source code.)
+   (you can find it in fanplayer project source code.)
 
 > ./build_ffmpeg_for_win32.sh
 
