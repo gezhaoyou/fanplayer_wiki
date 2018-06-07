@@ -66,7 +66,7 @@ video only 的播放
 ## 授权和捐赠
 [授权和捐赠](https://github.com/rockcarry/ffplayer/wiki/授权和捐赠)
 
-[感谢捐赠]( https://github.com/rockcarry/ffplayer/wiki/感谢捐赠])
+[感谢捐赠](https://github.com/rockcarry/ffplayer/wiki/感谢捐赠)
 
 ## 合作项目
 [sunplayer](https://github.com/rockcarry/ffplayer/wiki/sunplayer)
