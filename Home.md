@@ -9,7 +9,7 @@
 
 [build fanplayer for win32 & android](https://github.com/rockcarry/fanplayer/wiki/build-fanplayer)
 
-[download fanplayer binary files](https://github.com/rockcarry/fanplayer/wiki/download-fanplayer-binary-files)
+[download fanplayer](https://github.com/rockcarry/fanplayer/wiki/download-fanplayer-binary-files)
 
 ## fanplayer 原理、架构及代码分析
 
