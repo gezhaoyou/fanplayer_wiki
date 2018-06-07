@@ -1,5 +1,7 @@
 # Welcome to the fanplayer wiki!
 
+## download
+[download fanplayer](https://github.com/rockcarry/fanplayer/wiki/download-fanplayer-binary-files)
 
 ## ffmpeg & fanplayer 编译方法
 
@@ -8,8 +10,6 @@
 [build ffmpeg for android](https://github.com/rockcarry/fanplayer/wiki/build-ffmpeg-for-android)
 
 [build fanplayer for win32 & android](https://github.com/rockcarry/fanplayer/wiki/build-fanplayer)
-
-[download fanplayer](https://github.com/rockcarry/fanplayer/wiki/download-fanplayer-binary-files)
 
 ## fanplayer 原理、架构及代码分析
 
