@@ -1,8 +1,8 @@
 this page gives the fanplayer binary download links:
 
-fanplayer v1.5.2
+fanplayer v1.5.3
 ----------------
-link：https://pan.baidu.com/s/1V5pMjWEz3bWBYJm90NSZ1w
+link：https://pan.baidu.com/s/1_83hl8KszfgnQu1lp13qyQ
 
-passcode：ndix
+passcode：o66o
 
