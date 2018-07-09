@@ -57,7 +57,7 @@ video only 的播放
 
 视频播放截屏功能
 
-硬件加速
+[硬件加速](https://github.com/rockcarry/fanplayer/wiki/硬件加速)
 
 字幕显示
 
