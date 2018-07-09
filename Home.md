@@ -64,6 +64,10 @@ video only 的播放
 歌词显示
 
 
+## FAQ
+1. 如何优化流媒体播放的延时
+
+
 ## 授权和捐赠
 [授权和捐赠](https://github.com/rockcarry/fanplayer/wiki/授权和捐赠)
 
