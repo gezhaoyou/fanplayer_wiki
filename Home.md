@@ -33,7 +33,7 @@
 
 [包队列 pktqueue](https://github.com/rockcarry/fanplayer/wiki/包队列-pktqueue)
 
-抽象设备 adev
+[抽象设备 adev](https://github.com/rockcarry/fanplayer/wiki/抽象设备-adev)
 
 抽象设备 vdev
 
@@ -65,8 +65,6 @@ video only 的播放
 
 
 ## FAQ
-1. 如何优化流媒体播放的延时
-
 
 ## 授权和捐赠
 [授权和捐赠](https://github.com/rockcarry/fanplayer/wiki/授权和捐赠)
