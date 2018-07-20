@@ -65,6 +65,7 @@ video only 的播放
 
 
 ## FAQ
+[FAQ](https://github.com/rockcarry/fanplayer/wiki/FAQ)
 
 ## 授权和捐赠
 [授权和捐赠](https://github.com/rockcarry/fanplayer/wiki/授权和捐赠)
