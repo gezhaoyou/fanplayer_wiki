@@ -37,5 +37,6 @@ please change settings in project configuration:
 
 set to No (/SAFESEH:NO)
 
-
+### 3. for android ndk build got "conditional branch to PLT in THUMB-2 not supported yet."
+please change build_ffmpeg_for_android.sh, remove "--enable-thumb" from ffmpeg configure.
 
