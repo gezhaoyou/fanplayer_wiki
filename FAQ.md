@@ -9,6 +9,11 @@
 打开试试，我这边实测 rtsp 的延时可以在 200ms 以内。
 
 ### 2. 流媒体播放自动重连功能如何实现
-可以通过 player_getparam(m_ffPlayer, PARAM_MEDIA_POSITION, &pos); 这样的接口获取当前播放位置，如果 pos 为 -1 说明无法及时获取到媒体数据，很大可能性就是由于网络质量差，导致缓冲或者连接断开。这种情况下，可以关闭播放器再重新打开 player_close -> player_open。
+需要配置初始参数：
+
+    init_timeout   = 500;
+    auto_reconnect = 500;
+
+即可实现自动重连功能。
 
 
