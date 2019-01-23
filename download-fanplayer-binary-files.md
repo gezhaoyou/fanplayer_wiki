@@ -1,9 +1,9 @@
 you can download the fanplayer binary files here:
 
-### fanplayer v1.6.3
-link：https://pan.baidu.com/s/18gM74dEaPkJSMbpWwBLFDg
+### fanplayer v1.6.5
+link：https://pan.baidu.com/s/1IKvLVJxCpwUIYXxhCNqCwg
 
-passcode：vzul
+passcode：ytsa
 
 ### fanplayer v1.5.4
 link：https://pan.baidu.com/s/10D_GJMjiA3ZECgNQ58hjEQ
